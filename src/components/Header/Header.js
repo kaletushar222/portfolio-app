@@ -1,20 +1,70 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./Header.css";
-import ImgLogo from "../../assets/img/logo.png"
+import apiUrls from "../../urls/apiUrls";
 
 const Header = () => {
+    const [activeSection, setActiveSection] = useState('home');
+    
+    const sections = [
+      { id: 'hero', title: 'Home', icon: "bi bi-house navicon" },
+      { id: 'about', title: 'About', icon: "bi bi-person navicon" },
+      { id: 'skills', title: 'Skills', icon: "bi bi-code-slash navicon" },
+      { id: 'resume', title: 'Resume', icon: "bi bi-file-earmark-text navicon"},
+      { id: 'portfolio', title: 'Gallary', icon: "bi bi-images navicon" },
+      { id: 'contact', title: 'Contact', icon: "bi bi-envelope navicon" }
+    ];
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setActiveSection(entry.target.id);
+            }
+          });
+        },
+        { threshold: 0.6 } // Adjust threshold for sensitivity
+      );
+  
+      sections.forEach(({ id }) => {
+        const sectionElement = document.getElementById(id);
+        if (sectionElement) {
+          observer.observe(sectionElement);
+        }
+      });
+  
+      return () => {
+        sections.forEach(({ id }) => {
+          const sectionElement = document.getElementById(id);
+          if (sectionElement) {
+            observer.unobserve(sectionElement);
+          }
+        });
+      };
+    }, []);
+
   return (
     <header id="header" class="header d-flex flex-column justify-content-center">
         <i class="header-toggle d-xl-none bi bi-list"></i>
         <nav id="navmenu" class="navmenu">
-        <img href="#hero" className="logo-img" src={ ImgLogo } alt="Logo" />
+        <a href='#hero' style={{ all: "unset"}} >
+          <img href="#hero" className="logo-img" src={ apiUrls.getImagesUrl + "assets/img/logo.png" } alt="Logo" />
+        </a>
         <br/><br/><br/>
         <ul>
-            <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-            <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-            <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-            <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Gallery</span></a></li>
-            <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+          {
+            sections.map((navitem) => (
+              <li>
+                <a key={navitem.id}
+                  href={`#${navitem.id }`}
+                  className={ activeSection && activeSection === navitem.id && "active" }
+                >
+                  <i className={ navitem.icon }></i>
+                  <span>{ navitem.title }</span>
+                </a>
+              </li>
+            ))
+          }
         </ul>
         </nav>
     </header>

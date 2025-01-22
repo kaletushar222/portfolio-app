@@ -5,17 +5,17 @@ import "./Resume.css";
 const Resume = () => {
   return (
     <div>
-      <section id="resume" class="resume section">
-        <div class="container section-title" data-aos="fade-up">
+      <section id="resume" className="resume section">
+        <div className="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
           <p>Software Developer with 6+ years of experience, specializing in design and integration problem-solving. Expert in ReactJS with strong skills in database analysis and design. Proficient in developing user requirements, creating specifications, and implementing new features.</p>
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Sumary</h3>
-              <div class="resume-item pb-0">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 className="resume-title">Sumary</h3>
+              <div className="resume-item pb-0">
                 <h4>Tushar Kale</h4>
                 <ul>
                   <li>Pune-Maharastra</li>
@@ -24,15 +24,15 @@ const Resume = () => {
                 </ul>
               </div>
 
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
+              <h3 className="resume-title">Education</h3>
+              <div className="resume-item">
                 <h4>Master's in Computer Science</h4>
                 <h5>2015 - 2017</h5>
                 <p><em>Pune University, Maharashra, IN</em></p>
                 <p>With a Master’s in Computer Science, I’ve deepened my expertise, refining my ability to tackle advanced technical challenges and innovate in the ever-evolving tech landscape.</p>
               </div>
 
-              <div class="resume-item">
+              <div className="resume-item">
                 <h4>Bachelor's in Computer Science</h4>
                 <h5>2012 - 2015</h5>
                 <p><em>Pune University, Maharashra, IN</em></p>
@@ -45,9 +45,9 @@ const Resume = () => {
 
             </div>
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Professional Experience</h3>
-              <div class="resume-item">
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 className="resume-title">Professional Experience</h3>
+              <div className="resume-item">
                 <h4>Senior Software Engineer</h4>
                 <h5>June 2021 - Present</h5>
                 <p><em>Accenture, Pune-Maharashra, IN </em></p>
@@ -60,7 +60,7 @@ const Resume = () => {
                 </ul>
               </div>
 
-              <div class="resume-item">
+              <div className="resume-item">
                 <h4>Assistant Manager - Technical</h4>
                 <h5>December 2017 - June 2021</h5>
                 <p><em>Procmart, Pune-Maharashra, IN</em></p>
@@ -73,7 +73,7 @@ const Resume = () => {
                 </ul>
               </div>
 
-              <div class="resume-item">
+              <div className="resume-item">
                 <h4>Junior Java Developer - Intern</h4>
                 <h5>December 2016 - June 2017</h5>
                 <p><em>LBT Mind Technologies Pvt Ltd</em></p>

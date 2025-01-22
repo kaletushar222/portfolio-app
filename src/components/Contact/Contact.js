@@ -4,34 +4,34 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div>
-      <section id="contact" class="contact section">
-        <div class="container section-title" data-aos="fade-up">
+      <section id="contact" className="contact section">
+        <div className="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
           <p>I’d love to hear from you! Whether you have a project idea, a question, or just want to connect, feel free to reach out</p>
         </div>
 
-        <div class="container" data-aos="fade" data-aos-delay="100">
-          <div class="row gy-4">
+        <div className="container" data-aos="fade" data-aos-delay="100">
+          <div className="row gy-4">
 
-            <div class="col-lg-4">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div className="col-lg-4">
+              <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i className="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
                   <p>Kalepadal, Hadapsar, Pune, IN</p>
                 </div>
               </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
+              <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i className="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
                   <p>+91 8888422801</p>
                 </div>
               </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
+              <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i className="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
                   <p>kaletushar222@gmail.com</p>
@@ -40,30 +40,30 @@ const Contact = () => {
 
             </div>
 
-            <div class="col-lg-8">
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
+            <div className="col-lg-8">
+              <form action="forms/contact.php" method="post" className="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div className="row gy-4">
 
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required=""/>
+                  <div className="col-md-6">
+                    <input type="text" name="name" className="form-control" placeholder="Your Name" required=""/>
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required=""/>
+                  <div className="col-md-6 ">
+                    <input type="email" className="form-control" name="email" placeholder="Your Email" required=""/>
                   </div>
 
-                  <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required=""/>
+                  <div className="col-md-12">
+                    <input type="text" className="form-control" name="subject" placeholder="Subject" required=""/>
                   </div>
 
-                  <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <div className="col-md-12">
+                    <textarea className="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                   </div>
 
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div className="col-md-12 text-center">
+                    <div className="loading">Loading</div>
+                    <div className="error-message"></div>
+                    <div className="sent-message">Your message has been sent. Thank you!</div>
 
                     <button type="submit">Send Message</button>
                   </div>

@@ -35,5 +35,9 @@
   },
   "devDependencies": {
     "web-vitals": "^4.2.4"
+  },
+  "resolutions": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

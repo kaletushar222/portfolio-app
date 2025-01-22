@@ -44,59 +44,59 @@ import ImgAws from "../../assets/img/skills/aws.png";
 const Skills = () => {
   return (
     <div>
-        <section id="skills" class="skills section">
-          <div class="container section-title" data-aos="fade-up">
+        <section id="skills" className="skills section">
+          <div className="container section-title" data-aos="fade-up">
             <h2>Skills</h2>
             <p>Highlighting the Skills and Expertise That Define My Journey and Drive Success</p>
           </div>
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row gy-4 justify-content-center">
-              <div class="tech-container">
-                <div class="tech-box">
+          <div className="container" data-aos="fade-up" data-aos-delay="100">
+            <div className="row gy-4 justify-content-center">
+              <div className="tech-container">
+                <div className="tech-box">
                   <img src={ ImgReact } alt="react" />
                   <p>React JS</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgJavaScript } alt="javascript" />
                   <p>JavaScript</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgHtml } alt="html" />
                   <p>HTML</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgCss } alt="CSS" />
                   <p>CSS</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgBackbone } alt="Backbonejs" />
                   <p>BackboneJS</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgMeteor } alt="meteor" />
                   <p>MeteorJS</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgMongo } alt="mongo" />
                   <p>Mongo DB</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgNode } alt="node" />
                   <p>Node JS</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgPython } alt="python" />
                   <p>Python</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgBootstrap } alt="bootstrap" />
                   <p>Bootstrap</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgJquery } alt="jquery" />
                   <p>jQuery</p>
                 </div>
-                <div class="tech-box">
+                <div className="tech-box">
                   <img src={ ImgAws } alt="aws" />
                   <p>AWS</p>
                 </div>
