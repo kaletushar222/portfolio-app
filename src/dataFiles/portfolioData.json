@@ -1,0 +1,84 @@
+{
+    "sections": [
+        { "id": "hero", "title": "Home", "icon": "bi bi-house navicon" },
+        { "id": "about", "title": "About", "icon": "bi bi-person navicon" },
+        { "id": "skills", "title": "Skills", "icon": "bi bi-code-slash navicon" },
+        { "id": "resume", "title": "Resume", "icon": "bi bi-file-earmark-text navicon"},
+        { "id": "portfolio", "title": "Gallary", "icon": "bi bi-images navicon" },
+        { "id": "contact", "title": "Contact", "icon": "bi bi-envelope navicon" }
+    ],
+
+    "personalInfo": {
+        "designation": "Full Stack Web Developer",
+        "website": "www.tushark.in",
+        "phone": "+91 8888422801",
+        "city": "Pune-Maharashtra, India",
+        "age": "30",
+        "degree": "Master's In Computer Science",
+        "email": "kaletushar222@gmail.com"
+    },
+
+    "skills": [
+        {
+          "name": "React JS",
+          "id": "1",
+          "imageUrl": "assets/img/skills/react.png"
+        },
+        {
+          "name": "JavaScript",
+          "id": "2",
+          "imageUrl": "assets/img/skills/javascript.png"
+        },
+        {
+          "name": "Html",
+          "id": "3",
+          "imageUrl": "assets/img/skills/html.png"
+        },
+        {
+          "name": "Css",
+          "id": "4",
+          "imageUrl": "assets/img/skills/css.png"
+        },
+        {
+          "name": "Backbone JS",
+          "id": "5",
+          "imageUrl": "assets/img/skills/backbonejs.png"
+        },
+        {
+          "name": "Meteor JS",
+          "id": "6",
+          "imageUrl": "assets/img/skills/meteor.png"
+        },
+        {
+          "name": "Mongo",
+          "id": "7",
+          "imageUrl": "assets/img/skills/mongo.png"
+        },
+        {
+          "name": "Node",
+          "id": "8",
+          "imageUrl": "assets/img/skills/node.png"
+        },
+        {
+          "name": "Python",
+          "id": "9",
+          "imageUrl": "assets/img/skills/python.png"
+        },
+        {
+          "name": "Bootstrap",
+          "id": "10",
+          "imageUrl": "assets/img/skills/bootstrap.png"
+        },
+        {
+          "name": "Jquery",
+          "id": "11",
+          "imageUrl": "assets/img/skills/jquery.png"
+        },
+        {
+          "name": "AWS",
+          "id": "12",
+          "imageUrl": "assets/img/skills/aws.png"
+        }
+    ]
+    
+}

@@ -2,7 +2,7 @@ import React from "react";
 import "./About.css";
 import ImgTushar from "../../assets/img/tushar.jpg";
 
-const About = () => {
+const About = ({personalInfo}) => {
   return (
     <section id="about" className="about section">
 
@@ -18,20 +18,20 @@ const About = () => {
             <img src={ ImgTushar } className="img-fluid" alt="" />
           </div>
           <div className="col-lg-8 content">
-            <h2>UI/UX Designer &amp; Web Developer.</h2>
+            <h2>{ personalInfo.designation }</h2>
             <div className="row">
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.tushark.in</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 8888422801</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Pune-Maharashra, India</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>{ personalInfo.website }</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{ personalInfo.phone }</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>{ personalInfo.city }</span></li>
                 </ul>
               </div>
               <div className="col-lg-6">
                 <ul>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master's In Computer Science</span></li>
-                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>kaletushar222@gmail.com</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{ personalInfo.age }</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{ personalInfo.degree }</span></li>
+                  <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{ personalInfo.email }</span></li>
                 </ul>
               </div>
             </div>

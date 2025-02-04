@@ -1,6 +1,16 @@
 import React from "react";
 import "./Contact.css";
 
+const personalInfo = {
+  designation: "Full Stack Web Developer",
+  website: "www.tushark.in",
+  phone: "+91 8888422801",
+  city: "Pune-Maharashtra, India",
+  age: "30",
+  degree: "Master's In Computer Science",
+  email: "kaletushar222@gmail.com"
+};
+
 const Contact = () => {
   return (
     <div>
@@ -18,7 +28,7 @@ const Contact = () => {
                 <i className="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Kalepadal, Hadapsar, Pune, IN</p>
+                  <p>{ personalInfo.city }</p>
                 </div>
               </div>
 
@@ -26,7 +36,7 @@ const Contact = () => {
                 <i className="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+91 8888422801</p>
+                  <p>{ personalInfo.phone }</p>
                 </div>
               </div>
 
@@ -34,30 +44,30 @@ const Contact = () => {
                 <i className="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>kaletushar222@gmail.com</p>
+                  <p>{ personalInfo.email }</p>
                 </div>
               </div>
 
             </div>
 
             <div className="col-lg-8">
-              <form action="forms/contact.php" method="post" className="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form action="https://formbold.com/s/3dd2e" method="post" className="php-email-form" data-aos="fade-up" data-aos-delay="200">
                 <div className="row gy-4">
 
                   <div className="col-md-6">
-                    <input type="text" name="name" className="form-control" placeholder="Your Name" required=""/>
+                    <input type="text" name="name" className="form-control" placeholder="Your Name" required="true"/>
                   </div>
 
                   <div className="col-md-6 ">
-                    <input type="email" className="form-control" name="email" placeholder="Your Email" required=""/>
+                    <input type="email" className="form-control" name="email" placeholder="Your Email" required="true"/>
                   </div>
 
                   <div className="col-md-12">
-                    <input type="text" className="form-control" name="subject" placeholder="Subject" required=""/>
+                    <input type="text" className="form-control" name="subject" placeholder="Subject" required="true"/>
                   </div>
 
                   <div className="col-md-12">
-                    <textarea className="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <textarea className="form-control" name="message" rows="6" placeholder="Message" required="true"></textarea>
                   </div>
 
                   <div className="col-md-12 text-center">
