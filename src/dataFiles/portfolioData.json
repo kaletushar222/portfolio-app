@@ -79,6 +79,128 @@
           "id": "12",
           "imageUrl": "assets/img/skills/aws.png"
         }
-    ]
+    ],
+
+    "applications": [
+      {
+        "id": "1",
+        "title": "B2B e-commerce Web Application",
+        "imageUrl": "assets/img/gallery/apps/b2b.jpg",
+        "description": "A comprehensive B2B web application designed to connect buyers and sellers seamlessly. It facilitates efficient transactions, provides robust inventory management, and supports features like product cataloging, order tracking, and secure payment processing to streamline business operations."
     
+      },
+      {
+        "id": "2",
+        "title": "Health Care Web Application",
+        "imageUrl": "assets/img/gallery/apps/healthcare.jpeg",
+        "description": "A user-friendly web application designed for the US healthcare sector, allowing users to enroll in health plans seamlessly. The application guides users through a survey to gather information such as age, location, and preferences, then provides personalized plan recommendations. It ensures accessibility, compliance with healthcare standards, and a streamlined enrollment process."
+      },
+      {
+        "id": "3",
+        "title": "Shri Datta Dairy Farm",
+        "imageUrl": "assets/img/gallery/apps/datta.png",
+        "description": "A specialized application for dairy farms to automate the generation of monthly bills. Providing accurate billing and payment records. The system streamlines operations, reduces manual errors, and ensures transparency in financial transactions.",
+        "appUrl": "https://kaletushar222.github.io/dairyapp/"
+      },
+      {
+        "id": "4",
+        "title": "Kondhare Associates",
+        "imageUrl": "assets/img/gallery/apps/kondhare.jpeg",
+        "description": "Static Website",
+        "appUrl": "https://kondhareassociates.co.in"
+      },
+      {
+        "id": "5",
+        "title": "Chronicle legal",
+        "imageUrl": "assets/img/gallery/apps/chronicle.jpg",
+        "description": "Static Website",
+        "appUrl": "https://chroniclelegal.in/"
+      }
+    ],
+
+    "photographs": [
+      {
+        "id": "1",
+        "title": "Madhe Ghat Waterfall",
+        "imageUrl": "assets/img/gallery/photos/madhe.png",
+        "description": "Madhe Ghat is a waterfall located in Maharashtra, a state of India, around 62 km southwest of Pune, bordering Raigad district."
+      },
+      {
+        "id": "2",
+        "title": "Venna Lake",
+        "imageUrl": "assets/img/gallery/photos/venna.jpg",
+        "description": "Venna Lake in Mahabaleshwar is a scenic spot offering boating, horse riding, and picnic areas amidst lush greenery."
+      },
+      {
+        "id": "3",
+        "title": "Krishnabai Temple",
+        "imageUrl": "assets/img/gallery/photos/mahabi.jpg",
+        "description": "Krishnabai Temple, built in the 13th century, is believed to be the source of the Krishna River. Nestled in Mahabaleshwar's serene hills, it's a tranquil spot for history and nature lovers."
+      },
+      {
+        "id": "5",
+        "title": "Diveagar Beach",
+        "imageUrl": "assets/img/gallery/photos/diveagar.jpeg",
+        "description": "Diveagar (Dive Agar) is a village located in Shrivardhan Taluka"
+      }
+    ],
+    
+    "resumeData": {
+      "name": "Tushar Kale",
+      "location": "Pune-Maharastra",
+      "phone": "(+91) 8888422801",
+      "email": "kaletushar222@gmail.com",
+      "summary": "Software Developer with 6+ years of experience, specializing in design and integration problem-solving. Expert in ReactJS with strong skills in database analysis and design. Proficient in developing user requirements, creating specifications, and implementing new features.",
+      "education": [
+        {
+          "degree": "Master's in Computer Science",
+          "years": "2015 - 2017",
+          "university": "Pune University, Maharashra, IN",
+          "description": "With a Master’s in Computer Science, I’ve deepened my expertise, refining my ability to tackle advanced technical challenges and innovate in the ever-evolving tech landscape."
+        },
+        {
+          "degree": "Bachelor's in Computer Science",
+          "years": "2012 - 2015",
+          "university": "Pune University, Maharashra, IN",
+          "description": "With a Bachelor's in Computer Science, I’ve built a strong foundation in problem-solving, innovation, and technology—equipping me to tackle complex challenges and drive impactful solutions."
+        }
+      ],
+      "experience": [
+        {
+          "title": "Senior Software Engineer",
+          "company": "Accenture, Pune-Maharashra, IN",
+          "years": "June 2021 - Present",
+          "responsibilities": [
+            "Designed and implemented responsive, user-friendly components to simplify health plan discovery and sign-up processes.",
+            "Focused on accessibility standards to improve usability for people with disabilities.",
+            "Collaborated with scrum teams to refine user stories and deliver features aligned with project goals.",
+            "Provided real-time support to facilitate smooth product releases.",
+            "Utilized technologies including ReactJS, Fiber UI, AEM, and Jenkins to develop and deploy solutions efficiently."
+          ]
+        },
+        {
+          "title": "Assistant Manager - Technical",
+          "company": "Procmart, Pune-Maharashra, IN",
+          "years": "December 2017 - June 2021",
+          "responsibilities": [
+            "Developed user interfaces using Meteor JS to create interactive and efficient applications.",
+            "Designed schemas for a B2B e-commerce web application, enabling robust CRUD operations with MongoDB.",
+            "Collaborated with teams to implement financial and stock management strategies.",
+            "Led training sessions for new candidates, fostering skill development and team integration.",
+            "Managed server deployments while gaining basic knowledge of AWS services like EC2 and Elastic IP."
+          ]
+        },
+        {
+          "title": "Junior Java Developer - Intern",
+          "company": "LBT Mind Technologies Pvt Ltd",
+          "years": "December 2016 - June 2017",
+          "responsibilities": [
+            "Enhanced and updated a GWT-based Windows application for inventory and financial management.",
+            "Utilized Spring MVC and Hibernate to support backend processes and improve application performance.",
+            "Implemented solutions for billing patterns and automated processes like ordering, billing, and barcoding.",
+            "Added features to manage accounting and stock flow effectively."
+          ]
+        }
+      ]
+    }
 }

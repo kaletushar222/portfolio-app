@@ -17,7 +17,7 @@ const Skills = ({skills}) => {
                   skills.map((skill, map)=>{
                     return (
                       <div className="tech-box">
-                        <img src={ apiUrls.getImagesUrl + skill.imageUrl } alt={ skill.name } />
+                        <img src={ apiUrls.imagesURL + skill.imageUrl } alt={ skill.name } />
                         <p>{ skill.name }</p>
                       </div>
                     )

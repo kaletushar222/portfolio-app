@@ -50,8 +50,8 @@ const PortfolioApp = () => {
             <Hero />
             <About personalInfo={ portfolioData.personalInfo } />
             <Skills skills={ portfolioData.skills }/>
-            <Resume />
-            <Portfolio />
+            <Resume resumeData={ portfolioData.resumeData } />
+            <Portfolio photographs={ portfolioData.photographs } applications={ portfolioData.applications } />
             <Contact />
         </main>
         <Footer />

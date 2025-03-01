@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="hero section light-background">
-      <img src={ apiUrls.getImagesUrl + "assets/img/hero-bg.jpg" } alt="hero" />
+      <img src={ apiUrls.imagesURL + "assets/img/hero-bg.jpg" } alt="hero" />
       <div className="container" data-aos="zoom-out">
         <div className="row justify-content-center">
           <div className="col-lg-9">

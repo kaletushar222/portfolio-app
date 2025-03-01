@@ -8,7 +8,7 @@ const Header = ({ sections, scrollActiveSection, setScrollActiveSection }) => {
           <i className="header-toggle d-xl-none bi bi-list"></i>
           <nav id="navmenu" className="navmenu">
           <a href='#hero' style={{ all: "unset"}} >
-            <img href="#hero" className="logo-img" src={ apiUrls.getImagesUrl + "assets/img/logo.png" } alt="Logo" />
+            <img href="#hero" className="logo-img" src={ apiUrls.imagesURL + "assets/img/logo.png" } alt="Logo" />
           </a>
           <br/><br/><br/>
           <ul>

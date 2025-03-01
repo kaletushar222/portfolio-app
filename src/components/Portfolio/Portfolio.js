@@ -2,73 +2,10 @@ import React from "react";
 import "./Portfolio.css";
 import apiUrls from "../../urls/apiUrls";
 
-const applications = [
-	{
-		id: "1",
-		title: "B2B e-commerce Web Application",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/apps/b2b.jpg",
-		description: "A comprehensive B2B web application designed to connect buyers and sellers seamlessly. It facilitates efficient transactions, provides robust inventory management, and supports features like product cataloging, order tracking, and secure payment processing to streamline business operations."
-
-	},
-	{
-		id: "2",
-		title: "Health Care Web Application",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/apps/healthcare.jpeg",
-		description: "A user-friendly web application designed for the US healthcare sector, allowing users to enroll in health plans seamlessly. The application guides users through a survey to gather information such as age, location, and preferences, then provides personalized plan recommendations. It ensures accessibility, compliance with healthcare standards, and a streamlined enrollment process."
-	},
-	{
-		id: "3",
-		title: "Shri Datta Dairy Farm",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/apps/datta.png",
-		description: "A specialized application for dairy farms to automate the generation of monthly bills. Providing accurate billing and payment records. The system streamlines operations, reduces manual errors, and ensures transparency in financial transactions.",
-		appUrl: "https://kaletushar222.github.io/dairyapp/"
-	},
-	{
-		id: "4",
-		title: "Kondhare Associates",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/apps/kondhare.jpeg",
-		description: "Static Website",
-		appUrl: "https://kondhareassociates.co.in"
-	},
-	{
-		id: "5",
-		title: "Chronicle legal",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/apps/chronicle.jpg",
-		description: "Static Website",
-		appUrl: "https://chroniclelegal.in/"
-	}
-];
-
-const photographs = [
-	{
-		id: "1",
-		title: "Madhe Ghat Waterfall",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/photos/madhe.png",
-		description: "Madhe Ghat is a waterfall located in Maharashtra, a state of India, around 62 km southwest of Pune, bordering Raigad district."
-	},
-	{
-		id: "2",
-		title: "Venna Lake",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/photos/venna.jpg",
-		description: "Venna Lake in Mahabaleshwar is a scenic spot offering boating, horse riding, and picnic areas amidst lush greenery."
-	},
-	{
-		id: "3",
-		title: "Krishnabai Temple",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/photos/mahabi.jpg",
-		description: "Krishnabai Temple, built in the 13th century, is believed to be the source of the Krishna River. Nestled in Mahabaleshwar's serene hills, it's a tranquil spot for history and nature lovers."
-	},
-	{
-		id: "5",
-		title: "Diveagar Beach",
-		imageUrl: apiUrls.getImagesUrl + "assets/img/gallery/photos/diveagar.jpeg",
-		description: "Diveagar (Dive Agar) is a village located in Shrivardhan Taluka"
-	}
-];
-
-
-
-const Portfolio = () => {
+const Portfolio = (props) => {
+	const applications = props.applications;
+	const photographs = props.photographs;
+	const imagesURL = apiUrls.imagesURL;
 	return (
 		<div>
 			<section id="portfolio" className="portfolio section">
@@ -91,12 +28,12 @@ const Portfolio = () => {
 								applications.map((app, key) => {
 									return (
 										<div key={key} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-											<img style={{width: "100%"}} src={app.imageUrl} alt={app.title} />
+											<img style={{width: "100%"}} src={ imagesURL + app.imageUrl} alt={app.title} />
 											<div className="portfolio-info">
 												<h4>{app.title}</h4>
 												<p>{app.description}</p>
 												{ app.appUrl && <span> <a href={ app.appUrl } target="_blank" > Visit App </a> </span> }
-												<a href={app.imageUrl} title={app.title} className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+												<a href={imagesURL + app.imageUrl} title={app.title} className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
 											</div>
 										</div>
 									)
@@ -106,11 +43,11 @@ const Portfolio = () => {
 								photographs.map((photoObj, key) => {
 									return (
 										<div key={key} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-											<img style={{width: "100%"}} src={ photoObj.imageUrl } className="img-fluid" alt={ photoObj.title } />
+											<img style={{width: "100%"}} src={ imagesURL + photoObj.imageUrl } className="img-fluid" alt={ photoObj.title } />
 											<div className="portfolio-info">
 												<h4>{ photoObj.title }</h4>
 												<p> { photoObj.description }</p>
-												<a href={ photoObj.imageUrl } title={ photoObj.title } className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+												<a href={ imagesURL + photoObj.imageUrl } title={ photoObj.title } className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
 											</div>
 										</div>
 									)
