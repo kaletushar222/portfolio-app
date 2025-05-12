@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import "./CookieDialog.css";
 
 const CookieDialog = ({ onAccept }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(() => {
+    return localStorage.getItem("cookiesAccepted") !== "true";
+  });
 
   const handleAccept = () => {
-    // Logic for accepting cookies
     console.log("Cookies accepted");
     setIsVisible(false);
+    localStorage.setItem("cookiesAccepted", "true");
     if (onAccept) onAccept();
   };
 
   const handleDecline = () => {
-    // Logic for declining cookies
     console.log("Cookies declined");
     setIsVisible(false);
   };

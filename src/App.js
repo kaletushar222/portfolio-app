@@ -8,8 +8,17 @@ import config from "./config.json";
 const App = () => {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
 
+  useEffect(() => {
+    const storedAcceptance = localStorage.getItem("cookiesAccepted");
+    if (storedAcceptance === "true") {
+      setCookiesAccepted(true);
+      clarity.start(config["clarity-project-id"]);
+    }
+  }, []);
+
   const handleCookiesAccepted = () => {
     setCookiesAccepted(true);
+    localStorage.setItem("cookiesAccepted", "true");
     clarity.start(config["clarity-project-id"]);
   };
 
