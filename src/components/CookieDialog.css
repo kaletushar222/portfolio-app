@@ -1,0 +1,64 @@
+.cookie-dialog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color, #fff);
+  border-top: 2px solid var(--secondary-color, #ccc);
+  padding: 16px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.cookie-dialog p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--text-color, #333);
+  text-align: center;
+}
+
+.cookie-dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cookie-dialog-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-dialog-buttons button:first-child {
+  background-color: var(--primary-button-color, #7600bc); /* Matches Send Message button */
+  color: white;
+  border: 1px solid var(--primary-button-color, #7600bc);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cookie-dialog-buttons button:first-child:hover {
+  background-color: white;
+  color: var(--primary-button-color, #7600bc);
+}
+
+.cookie-dialog-buttons button:last-child {
+  background-color: white; /* Inverted version */
+  color: var(--primary-button-color, #7600bc);
+  border: 1px solid var(--primary-button-color, #7600bc);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cookie-dialog-buttons button:last-child:hover {
+  background-color: var(--primary-button-color, #7600bc);
+  color: white;
+}
