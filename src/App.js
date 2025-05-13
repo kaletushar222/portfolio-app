@@ -19,10 +19,18 @@ const App = () => {
     }
   }, []);
 
+  const addClarityScript = () => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+    script.src = `https://www.clarity.ms/tag/${config["clarity-project-id"]}`;
+    document.body.appendChild(script);
+  };
+
   const handleCookiesAccepted = () => {
     setCookiesAccepted(true);
     localStorage.setItem("cookiesAccepted", "true");
-    clarity.start(config["clarity-project-id"]);
+    addClarityScript();
   };
 
   useEffect(() => {
