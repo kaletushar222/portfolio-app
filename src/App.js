@@ -15,6 +15,7 @@ const App = () => {
     if (storedAcceptance === "true") {
       setCookiesAccepted(true);
       console.log("Cookies already accepted");
+      addClarityScript();
       clarity.start(config["clarity-project-id"]);
     }
   }, []);
@@ -31,6 +32,7 @@ const App = () => {
     setCookiesAccepted(true);
     localStorage.setItem("cookiesAccepted", "true");
     addClarityScript();
+    clarity.start(config["clarity-project-id"]);
   };
 
   useEffect(() => {
