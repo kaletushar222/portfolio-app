@@ -1,12 +1,24 @@
+/* Add overlay for the website background */
+.cookie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Ensure the cookie dialog sticks to the bottom of the window */
 .cookie-dialog {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--primary-color, #fff);
-  border-top: 2px solid var(--secondary-color, #ccc);
-  padding: 16px;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   z-index: 1000;
 }
 

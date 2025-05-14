@@ -37,6 +37,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <style>
+      #cookie-overlay {
+        display: none;
+      }
+    </style>
       <!-- Scroll Top -->
       <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -52,6 +57,14 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const overlay = document.getElementById("cookie-overlay");
+        if (overlay) {
+          overlay.remove();
+        }
+      });
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

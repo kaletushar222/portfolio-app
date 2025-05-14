@@ -20,6 +20,28 @@ const App = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const cookiesAccepted = localStorage.getItem("cookiesAccepted") === "true";
+    if (!cookiesAccepted) {
+      const overlay = document.getElementById("cookie-overlay");
+      const dialog = document.getElementById("cookie-dialog");
+      if (overlay && dialog) {
+        overlay.style.display = "block";
+        dialog.style.display = "block";
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const cookiesAccepted = localStorage.getItem("cookiesAccepted") === "true";
+    if (!cookiesAccepted) {
+      const overlay = document.getElementById("cookie-overlay");
+      if (overlay) {
+        overlay.style.display = "block";
+      }
+    }
+  }, []);
+
   const addClarityScript = () => {
     const script = document.createElement("script");
     script.type = "text/javascript";
