@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import config from "../../config.json";
 
 const Footer = () => {
   return (
@@ -13,6 +14,11 @@ const Footer = () => {
           <a href="https://www.instagram.com/tu__shark/" target="_blank"><i class="bi bi-instagram"></i></a>
           <a href="https://www.linkedin.com/in/tusharkale22/" target="_blank"><i class="bi bi-linkedin"></i></a>
           <a href="https://tusharkale.medium.com/" target="_blank"><i class="bi bi-medium"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="text-center">© 2025 Tushar Kale. All rights reserved. | V: {config["app-version"]}  </p>
         </div>
       </div>
     </footer>
