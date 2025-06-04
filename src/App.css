@@ -773,7 +773,11 @@ section,
   font-family: var(--heading-font);
 }
 
-.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li:hover {
+  color: var(--contrast-color);
+  background-color: #ae6fc3;
+}
+
 .portfolio .portfolio-filters li.filter-active {
   color: var(--contrast-color);
   background-color: var(--accent-color);

@@ -1,6 +1,6 @@
 import React from "react";
-import ImgExp from "../../assets/img/exp.png";
 import "./Resume.css";
+import apiUrls from "../../urls/apiUrls";
 
 const Resume = ({resumeData}) => {
   return (
@@ -34,7 +34,7 @@ const Resume = ({resumeData}) => {
             ))}
 
             <div>
-              <img id="exp-img" src={ImgExp} alt="experience" />
+              <img id="exp-img" src={apiUrls.imagesURL + "assets/img/exp.png"} alt="experience" />
             </div>
           </div>
 
