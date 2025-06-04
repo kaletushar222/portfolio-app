@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.9a5ab498.css",
-    "main.js": "/static/js/main.8416375e.js",
+    "main.js": "/static/js/main.58a54709.js",
     "static/js/488.5aeeff0e.chunk.js": "/static/js/488.5aeeff0e.chunk.js",
     "static/media/tushar.jpg": "/static/media/tushar.bb72351b8d226591ace8.jpg",
     "static/media/exp.png": "/static/media/exp.9a7e75401ef199c9b0db.png",
     "index.html": "/index.html",
     "main.9a5ab498.css.map": "/static/css/main.9a5ab498.css.map",
-    "main.8416375e.js.map": "/static/js/main.8416375e.js.map",
+    "main.58a54709.js.map": "/static/js/main.58a54709.js.map",
     "488.5aeeff0e.chunk.js.map": "/static/js/488.5aeeff0e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a5ab498.css",
-    "static/js/main.8416375e.js"
+    "static/js/main.58a54709.js"
   ]
 }
