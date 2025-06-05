@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import "./Header.css";
 import apiUrls from "../../urls/apiUrls";
-
+import { toggleMobileHeader } from '../../utils/utils';
 const Header = ({ sections, scrollActiveSection, setScrollActiveSection }) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   const toggleHeader = () => {
+    toggleMobileHeader();
     if (isHeaderVisible) {
       // If header is already visible, hide it
       setIsHeaderVisible(false);

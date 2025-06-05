@@ -9,10 +9,10 @@ import Skills from "../components/Skills/Skills";
 import Portfolio from "../components/Portfolio/Portfolio";
 import $ from 'jquery';
 import portfolioData from "../dataFiles/portfolioData.json"
+import { toggleMobileHeader } from "../utils/utils.js";
 
 const PortfolioApp = () => {
     const [scrollActiveSection, setScrollActiveSection] = useState('home');
-
     const appLoaded = () => {
         $("#preloader").hide();
     };
@@ -42,11 +42,20 @@ const PortfolioApp = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const hideMobileHeader = () => {
+        // if mobile header is visible then hide it
+        console.log("hideMobileHeader called");
+        debugger;
+        const header = document.getElementById("header");
+        if (header && header.classList.contains("header-show")) {
+            toggleMobileHeader();
+        }
+    }
     return (
     <div >
         <div id="preloader"></div>
         <Header sections={portfolioData.sections} scrollActiveSection={scrollActiveSection} setScrollActiveSection={setScrollActiveSection} />
-        <main>
+        <main onClick={() => hideMobileHeader}>
             <Hero />
             <About personalInfo={ portfolioData.personalInfo } />
             <Skills skills={ portfolioData.skills }/>
