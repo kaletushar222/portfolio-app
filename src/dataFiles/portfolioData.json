@@ -70,9 +70,9 @@
           "imageUrl": "assets/img/skills/bootstrap.png"
         },
         {
-          "name": "Jquery",
+          "name": "Java",
           "id": "11",
-          "imageUrl": "assets/img/skills/jquery.png"
+          "imageUrl": "assets/img/skills/java-1.png"
         },
         {
           "name": "AWS",
@@ -188,24 +188,13 @@
         {
           "title": "Assistant Manager - Technical",
           "company": "Procmart, Pune-Maharashra, IN",
-          "years": "December 2017 - June 2021",
+          "years": "November 2017 - June 2021",
           "responsibilities": [
             "Developed user interfaces using Meteor JS to create interactive and efficient applications.",
             "Designed schemas for a B2B e-commerce web application, enabling robust CRUD operations with MongoDB.",
             "Collaborated with teams to implement financial and stock management strategies.",
             "Led training sessions for new candidates, fostering skill development and team integration.",
             "Managed server deployments while gaining basic knowledge of AWS services like EC2 and Elastic IP."
-          ]
-        },
-        {
-          "title": "Junior Java Developer - Intern",
-          "company": "LBT Mind Technologies Pvt Ltd",
-          "years": "December 2016 - June 2017",
-          "responsibilities": [
-            "Enhanced and updated a GWT-based Windows application for inventory and financial management.",
-            "Utilized Spring MVC and Hibernate to support backend processes and improve application performance.",
-            "Implemented solutions for billing patterns and automated processes like ordering, billing, and barcoding.",
-            "Added features to manage accounting and stock flow effectively."
           ]
         }
       ]

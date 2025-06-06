@@ -763,7 +763,7 @@ section,
   cursor: pointer;
   display: inline-block;
   padding: 8px 20px 10px 20px;
-  margin: 0;
+  margin: 5px;
   font-size: 15px;
   font-weight: 500;
   line-height: 1;
@@ -775,7 +775,7 @@ section,
 
 .portfolio .portfolio-filters li:hover {
   color: var(--contrast-color);
-  background-color: #ae6fc3;
+  background-color: #c795d8;
 }
 
 .portfolio .portfolio-filters li.filter-active {

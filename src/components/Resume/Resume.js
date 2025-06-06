@@ -32,10 +32,6 @@ const Resume = ({resumeData}) => {
                 <p>{edu.description}</p>
               </div>
             ))}
-
-            <div>
-              <img id="exp-img" src={apiUrls.imagesURL + "assets/img/exp.png"} alt="experience" />
-            </div>
           </div>
 
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
