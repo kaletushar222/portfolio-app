@@ -61,7 +61,7 @@ const PortfolioApp = () => {
             <Skills skills={ portfolioData.skills }/>
             <Resume resumeData={ portfolioData.resumeData } />
             <Portfolio photographs={ portfolioData.photographs } applications={ portfolioData.applications } />
-            <Contact />
+            <Contact personalInfo={ portfolioData.personalInfo } />
         </main>
         <Footer />
     </div>

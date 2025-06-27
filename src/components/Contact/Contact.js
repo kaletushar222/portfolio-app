@@ -1,17 +1,7 @@
 import React from "react";
 import "./Contact.css";
 
-const personalInfo = {
-  designation: "Full Stack Web Developer",
-  website: "www.tushark.in",
-  phone: "+91 8888422801",
-  city: "Pune-Maharashtra, India",
-  age: "30",
-  degree: "Master's In Computer Science",
-  email: "kaletushar222@gmail.com"
-};
-
-const Contact = () => {
+const Contact = ({ personalInfo }) => {
   return (
     <div>
       <section id="contact" className="contact section">
