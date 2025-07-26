@@ -51,6 +51,18 @@ const Resume = ({resumeData}) => {
           </div>
         </div>
       </div>
+      <center>
+        <br /><br />
+        <a
+          href={apiUrls.imagesURL + resumeData.pdfCVUrl}
+          className="custom-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          Download My CV
+        </a>
+      </center>
     </section>
   );
 };
