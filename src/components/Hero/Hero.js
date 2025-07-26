@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="container" data-aos="zoom-out">
         <div className="row justify-content-center">
           <div className="col-lg-9">
-            <h2>Tushar Kale</h2>
+            <h2><span className="shine-once">Tushar Kale</span></h2>
             <p>I'm <Typewriter
                     words={['Developer', 'Photographer', 'Designer']}
                     typeSpeed={100}
