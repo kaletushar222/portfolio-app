@@ -54,7 +54,7 @@ const Resume = ({resumeData}) => {
       <center>
         <br /><br />
         <a
-          href={apiUrls.imagesURL + resumeData.pdfCVUrl}
+          href={apiUrls.pdfURL + resumeData.pdfCVUrl}
           className="custom-btn"
           target="_blank"
           rel="noopener noreferrer"

@@ -6,7 +6,7 @@ import "./Portfolio.css";
 const Portfolio = (props) => {
 	const applications = props.applications;
 	const photographs = props.photographs;
-	const imagesURL = apiUrls.imagesURL;
+	const imageURL = apiUrls.imageURL;
 	const [filterSelected, setFilterSelected] = useState("ALL");
 
 	const handleFilterSelection = (filter) => {
@@ -39,12 +39,12 @@ const Portfolio = (props) => {
 									if (filterSelected == "ALL" || filterSelected === "APPS") {
 										return (
 											<div key={key} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-												<img style={{width: "100%"}} src={ imagesURL + app.imageUrl} alt={app.title} />
+												<img style={{width: "100%"}} src={ imageURL + app.imageUrl} alt={app.title} />
 												<div className="portfolio-info">
 													<h4>{app.title}</h4>
 													<p>{app.description}</p>
 													{ app.appUrl && <span> <a href={ app.appUrl } target="_blank" > Visit App </a> </span> }
-													<a href={imagesURL + app.imageUrl} title={app.title} className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+													<a href={imageURL + app.imageUrl} title={app.title} className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
 												</div>
 											</div>
 										)
@@ -56,11 +56,11 @@ const Portfolio = (props) => {
 									if (filterSelected == "ALL" || filterSelected === "PHOTOS") {
 										return (
 											<div key={key} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-												<img style={{width: "100%"}} src={ imagesURL + photoObj.imageUrl } className="img-fluid" alt={ photoObj.title } />
+												<img style={{width: "100%"}} src={ imageURL + photoObj.imageUrl } className="img-fluid" alt={ photoObj.title } />
 												<div className="portfolio-info">
 													<h4>{ photoObj.title }</h4>
 													<p> { photoObj.description }</p>
-													<a href={ imagesURL + photoObj.imageUrl } title={ photoObj.title } className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+													<a href={ imageURL + photoObj.imageUrl } title={ photoObj.title } className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
 												</div>
 											</div>
 										)

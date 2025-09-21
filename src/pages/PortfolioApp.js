@@ -8,11 +8,21 @@ import Resume from "../components/Resume/Resume";
 import Skills from "../components/Skills/Skills";
 import Portfolio from "../components/Portfolio/Portfolio";
 import $ from 'jquery';
-import portfolioData from "../dataFiles/portfolioData.json"
 import { toggleMobileHeader } from "../utils/utils.js";
+import apiUrls from "../urls/apiUrls";
+import PortfolioDataModel from "../models/PortfolioDataModel";
 
 const PortfolioApp = () => {
     const [scrollActiveSection, setScrollActiveSection] = useState('home');
+    const [portfolioData, setPortfolioData] = useState(new PortfolioDataModel());
+
+    useEffect(() => {
+        console.log("Fetching portfolio data from ", apiUrls.dataURL + "portfolio-data.json");
+        fetch(apiUrls.dataURL + "portfolio-data.json")
+            .then(res => res.json())
+            .then(data => setPortfolioData(new PortfolioDataModel(data)));
+    }, []);
+
     const appLoaded = () => {
         $("#preloader").hide();
     };
@@ -22,6 +32,7 @@ const PortfolioApp = () => {
     }, []);
 
     useEffect(() => {
+        if (!portfolioData) return;
         const handleScroll = () => {
             portfolioData.sections.forEach((section) => {
                 const element = document.getElementById(section.id);
@@ -40,7 +51,7 @@ const PortfolioApp = () => {
     
         // Cleanup function to remove event listener on unmount
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [portfolioData]);
 
     const hideMobileHeader = () => {
         // if mobile header is visible then hide it
@@ -50,6 +61,9 @@ const PortfolioApp = () => {
         if (header && header.classList.contains("header-show")) {
             toggleMobileHeader();
         }
+    }
+    if (!portfolioData) {
+        return <div id="preloader"></div>;
     }
     return (
     <div >

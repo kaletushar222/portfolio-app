@@ -16,7 +16,7 @@ const About = ({personalInfo}) => {
 
         <div className="row gy-4 justify-content-center">
           <div className="col-lg-4">
-            <img src={ apiUrls.imagesURL + "assets/img/tushar.jpg" } className="img-fluid" alt="" />
+            <img src={ apiUrls.imageURL + "tushar.jpg" } className="img-fluid" alt="" />
           </div>
           <div className="col-lg-8 content">
             <h2>{ personalInfo.designation }</h2>
