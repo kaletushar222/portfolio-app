@@ -56,7 +56,6 @@ const PortfolioApp = () => {
     const hideMobileHeader = () => {
         // if mobile header is visible then hide it
         console.log("hideMobileHeader called");
-        debugger;
         const header = document.getElementById("header");
         if (header && header.classList.contains("header-show")) {
             toggleMobileHeader();
