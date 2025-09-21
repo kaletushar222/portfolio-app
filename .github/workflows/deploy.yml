@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   bump-version:
@@ -28,3 +31,5 @@ jobs:
           git add src/config.json
           git commit -m "Auto bump app-version in config.json" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
