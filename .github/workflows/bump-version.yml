@@ -20,8 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Install dependencies
-        # Only install, build, and deploy on push to main
+      # Only install, build, and deploy on push to main
       - name: Install dependencies
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npm install
