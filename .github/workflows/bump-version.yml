@@ -20,8 +20,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+      - name: Install dependencies
+        run: npm install
       - name: Bump version in config.json
         run: node src/auto-scripts/bump-version.js
+      - name: Build project
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
       - name: Commit and push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
