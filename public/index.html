@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>tu_shark</title>
+    <title>tu_shark | Portfolio of Tushar</title>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Portfolio website of Tushar - Full Stack Developer, featuring projects, skills, resume, and contact information." />
+    <meta name="keywords" content="Tushar, Portfolio, Developer, Full Stack, Projects, Resume, Skills, Contact" />
+    <meta property="og:title" content="Tushar's Portfolio" />
+    <meta property="og:description" content="Explore the portfolio of Tushar, a Full Stack Developer. View projects, skills, and contact information." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tushar's Portfolio" />
+    <meta name="twitter:description" content="Portfolio website of Tushar - Full Stack Developer." />
+    <meta name="twitter:image" content="https://yourdomain.com/images/og-image.jpg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tushar Kale",
+        "url": "https://tushark.in/",
+        "sameAs": [
+          "https://in.linkedin.com/in/tusharkale22",
+          "https://github.com/kaletushar222"
+        ],
+        "jobTitle": "Full Stack Developer",
+        "image": "https://tushark.in/images/og-image.jpg",
+        "description": "Portfolio website of Tushar - Full Stack Developer, featuring projects, skills, resume, and contact information."
+      }
+    </script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -18,9 +40,9 @@
     <!-- Vendor CSS Files -->
     <link href="%PUBLIC_URL%/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="%PUBLIC_URL%/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="%PUBLIC_URL%/vendor/aos/aos.css" rel="stylesheet">
+    <!-- <link href="%PUBLIC_URL%/vendor/aos/aos.css" rel="stylesheet">
     <link href="%PUBLIC_URL%/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="%PUBLIC_URL%/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
     
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -37,11 +59,34 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <style>
+      #cookie-overlay {
+        display: none;
+      }
+    </style>
+      <!-- Scroll Top -->
+      <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+      <!-- Preloader -->
+      <script type="text/javascript" data-disabled="true">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "rikl2c8f0u");
+      </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const overlay = document.getElementById("cookie-overlay");
+        if (overlay) {
+          overlay.remove();
+        }
+      });
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -1,23 +1,53 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./Header.css";
+import apiUrls from "../../urls/apiUrls";
+import { toggleMobileHeader } from '../../utils/utils';
+const Header = ({ sections, scrollActiveSection, setScrollActiveSection }) => {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
-const Header = () => {
+  const toggleHeader = () => {
+    toggleMobileHeader();
+    if (isHeaderVisible) {
+      // If header is already visible, hide it
+      setIsHeaderVisible(false);
+      return;
+    }
+    setIsHeaderVisible(true);
+  };
+
+  const handleNavItemClick = (id) => {
+      setScrollActiveSection(id);
+      toggleHeader();
+  }
+
   return (
-    <header id="header" class="header d-flex flex-column justify-content-center">
-        <i class="header-toggle d-xl-none bi bi-list"></i>
-        <nav id="navmenu" class="navmenu">
-        <img href="#hero" id="hero-img" src="assets/img/logo.png" alt="Logo" />
-        <br/><br/><br/>
+    // add header-show class conditionally based on isHeaderVisible state
+    <header id="header" className={`header d-flex flex-column justify-content-center ${isHeaderVisible ? 'header-show' : ''}`}>
+      <i onClick={toggleHeader} className="header-toggle d-xl-none bi bi-list"></i>
+      <nav id="navmenu" className="navmenu">
+        <a href='#hero' style={{ all: "unset" }}>
+          <img href="#hero" className="logo-img" src={apiUrls.imageURL + "logo.png"} alt="Logo" />
+        </a>
+        <br /><br /><br />
         <ul>
-            <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-            <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-            <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-            <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Gallery</span></a></li>
-            <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-        </ul>
-        </nav>
-    </header>
-  );
+          {
+              sections.map((navitem) => (
+                <li>
+                  <a key={navitem.id}
+                    href={`#${navitem.id }`}
+                    onClick={() => { handleNavItemClick(navitem.id)}}
+                    className={ scrollActiveSection && scrollActiveSection === navitem.id && "active" }
+                  >
+                    <i className={ navitem.icon }></i>
+                    <span>{ navitem.title }</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          </nav>
+      </header>
+    );
 };
 
 export default Header;

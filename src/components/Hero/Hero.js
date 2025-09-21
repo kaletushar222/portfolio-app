@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Hero.css";
-import ImgHeroBg from "../../assets/img/hero-bg.jpg";
+import Typewriter from "../Typewriter/Typewriter"
+import apiUrls from "../../urls/apiUrls";
 
 const Hero = () => {
-    console.log("hero", ImgHeroBg );
+  useEffect(() => {
+  }, []);
+
   return (
-    <section id="hero" class="hero section light-background">
-      <img src={ ImgHeroBg } alt="hero" />
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Tushar Kale</h2>
-            <p>I'm <span class="typed" data-typed-items="Developer, Designer, Photographer">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <a href="https://github.com/kaletushar222" target="_blank"><i class="bi bi-github"></i></a>
-              <a href="https://www.facebook.com/tushar.kale2/" target="_blank"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/tu__shark/" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/tusharkale22/" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="https://tusharkale.medium.com/" target="_blank"><i class="bi bi-medium"></i></a>
+    <section id="hero" className="hero section light-background">
+      <img src={ apiUrls.imageURL + "hero-bg.jpg" } alt="hero" />
+      <div className="container" data-aos="zoom-out">
+        <div className="row justify-content-center">
+          <div className="col-lg-9">
+            <h2><span className="shine-once">Tushar Kale</span></h2>
+            <p>I'm <Typewriter
+                    words={['Developer', 'Photographer', 'Designer']}
+                    typeSpeed={100}
+                    delay={1000}
+                  />
+            </p>
+            <div className="social-links">
+              <a href="https://github.com/kaletushar222" target="_blank"><i className="bi bi-github"></i></a>
+              <a href="https://www.facebook.com/tushar.kale2/" target="_blank"><i className="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/tu__shark/" target="_blank"><i className="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/tusharkale22/" target="_blank"><i className="bi bi-linkedin"></i></a>
+              <a href="https://tusharkale.medium.com/" target="_blank"><i className="bi bi-medium"></i></a>
             </div>
           </div>
         </div>
