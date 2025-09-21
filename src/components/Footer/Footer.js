@@ -21,6 +21,10 @@ const Footer = () => {
           <p class="text-center">© 2025 Tushar Kale. All rights reserved. | V: {config["app-version"]}  </p>
         </div>
       </div>
+      <div style={{ float: "right", fontStyle: "italic", marginRight: "2%" }}>
+        Last updated: {config.lastUpdated}
+      </div>
+      <br/>
     </footer>
   )
 };
