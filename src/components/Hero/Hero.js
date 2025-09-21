@@ -21,11 +21,11 @@ const Hero = () => {
                   />
             </p>
             <div className="social-links">
-              <a href="https://github.com/kaletushar222" target="_blank"><i className="bi bi-github"></i></a>
-              <a href="https://www.facebook.com/tushar.kale2/" target="_blank"><i className="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/tu__shark/" target="_blank"><i className="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/tusharkale22/" target="_blank"><i className="bi bi-linkedin"></i></a>
-              <a href="https://tusharkale.medium.com/" target="_blank"><i className="bi bi-medium"></i></a>
+              <a href="https://github.com/kaletushar222" target="_blank" rel="noreferrer"><i className="bi bi-github"></i></a>
+              <a href="https://www.facebook.com/tushar.kale2/" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/tu__shark/" target="_blank" rel="noreferrer"><i className="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/tusharkale22/" target="_blank" rel="noreferrer"><i className="bi bi-linkedin"></i></a>
+              <a href="https://tusharkale.medium.com/" target="_blank" rel="noreferrer"><i className="bi bi-medium"></i></a>
             </div>
           </div>
         </div>

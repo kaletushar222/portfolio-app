@@ -28,32 +28,33 @@ const Portfolio = (props) => {
 					<div className="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
 						<ul className="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-							<li onClick={ () => handleFilterSelection("ALL") } data-filter="*" className={ filterSelected == "ALL" && "filter-active" } >All</li>
-							<li onClick={ () => handleFilterSelection("APPS") } data-filter=".filter-app" className={ filterSelected == "APPS" && "filter-active" } >Applications</li>
-							<li onClick={ () => handleFilterSelection("PHOTOS") } data-filter=".filter-product" className={ filterSelected == "PHOTOS" && "filter-active" }>Photographs</li>
+							<li onClick={ () => handleFilterSelection("ALL") } data-filter="*" className={ filterSelected === "ALL" && "filter-active" } >All</li>
+							<li onClick={ () => handleFilterSelection("APPS") } data-filter=".filter-app" className={ filterSelected === "APPS" && "filter-active" } >Applications</li>
+							<li onClick={ () => handleFilterSelection("PHOTOS") } data-filter=".filter-product" className={ filterSelected === "PHOTOS" && "filter-active" }>Photographs</li>
 						</ul>
 
 						<div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 							{
 								applications.map((app, key) => {
-									if (filterSelected == "ALL" || filterSelected === "APPS") {
+									if (filterSelected === "ALL" || filterSelected === "APPS") {
 										return (
 											<div key={key} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
 												<img style={{width: "100%"}} src={ imageURL + app.imageUrl} alt={app.title} />
 												<div className="portfolio-info">
 													<h4>{app.title}</h4>
 													<p>{app.description}</p>
-													{ app.appUrl && <span> <a href={ app.appUrl } target="_blank" > Visit App </a> </span> }
+													{ app.appUrl && <span> <a href={ app.appUrl } target="_blank" rel="noreferrer"> Visit App </a> </span> }
 													<a href={imageURL + app.imageUrl} title={app.title} className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
 												</div>
 											</div>
-										)
+										);
 									}
+									return null;
 								})
 							}
 							{
 								photographs.map((photoObj, key) => {
-									if (filterSelected == "ALL" || filterSelected === "PHOTOS") {
+									if (filterSelected === "ALL" || filterSelected === "PHOTOS") {
 										return (
 											<div key={key} className="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
 												<img style={{width: "100%"}} src={ imageURL + photoObj.imageUrl } className="img-fluid" alt={ photoObj.title } />
@@ -63,10 +64,11 @@ const Portfolio = (props) => {
 													<a href={ imageURL + photoObj.imageUrl } title={ photoObj.title } className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
 												</div>
 											</div>
-										)
+										);
 									}
+									return null;
 								})
-              				}
+							}
 						</div>
 					</div>
 				</div>
