@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
 
 jobs:
   bump-version:
@@ -17,7 +16,7 @@ jobs:
         with:
           node-version: '18'
       - name: Bump version in config.json
-        run: node bump-version.js
+        run: node src/auto-scripts/bump-version.js
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
