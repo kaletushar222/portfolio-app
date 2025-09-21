@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const configPath = path.join(__dirname, 'src', 'config.json');
+const configPath = path.join(__dirname, '..', 'config.json');
 
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 let [major, minor, patch] = config["app-version"].split('.').map(Number);
