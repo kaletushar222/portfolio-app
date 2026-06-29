@@ -3,6 +3,7 @@ import "./Resume.css";
 import apiUrls from "../../urls/apiUrls";
 
 const Resume = ({resumeData}) => {
+  debugger;
   return (
     <section id="resume" className="resume section">
       <div className="container section-title" data-aos="fade-up">
@@ -30,6 +31,15 @@ const Resume = ({resumeData}) => {
                 <h5>{edu.years}</h5>
                 <p><em>{edu.university}</em></p>
                 <p>{edu.description}</p>
+              </div>
+            ))}
+            {resumeData.certifications && resumeData.certifications.length > 0 && (
+              <h3 className="resume-title">Certifications</h3>
+            )}
+            {resumeData.certifications && resumeData.certifications.length > 0 && resumeData.certifications.map((cert, index) => (
+              <div className="resume-item" key={index}>
+                <h4>{cert.issuer}</h4>
+                <h5>{cert.title}</h5>
               </div>
             ))}
           </div>
